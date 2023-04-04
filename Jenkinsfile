@@ -8,8 +8,9 @@ pipeline {
   stages {
     stage('deploy') {
       steps {
-        sh '''rm -r /var/www/couscous/*
-git clone https://github.com/SadiKodemade/couscous.git /var/www/couscous 
+        sh '''sudo rm -rf /var/www/couscous
+sudo mkdir /var/www/couscous
+sudo git clone https://github.com/SadiKodemade/couscous.git /var/www/couscous 
 '''
       }
     }
