@@ -39,5 +39,18 @@ To see the stack trace of this error execute with --v=5 or higher
 
 --cri-socket=/var/run/dockershim.sock lors de l'exécution de kubeadm init
 
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                                        NAMES
+18f78cc9dd5e   consul    "docker-entrypoint.s…"   53 minutes ago   Up 53 minutes   8300-8302/tcp, 8500/tcp, 8301-8302/udp, 8600/tcp, 8600/udp   runtime
+root@sadi-VirtualBox:/home# kubeadm init
+[init] Using Kubernetes version: v1.27.1
+[preflight] Running pre-flight checks
+error execution phase preflight: [preflight] Some fatal errors occurred:
+	[ERROR CRI]: container runtime is not running: output: E0420 13:45:53.626536   11527 remote_runtime.go:616] "Status from runtime service failed" err="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial unix /var/run/containerd/containerd.sock: connect: no such file or directory\""
+time="2023-04-20T13:45:53+02:00" level=fatal msg="getting status of runtime: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial unix /var/run/containerd/containerd.sock: connect: no such file or directory\""
+, error: exit status 1
+[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
+To see the stack trace of this error execute with --v=5 or higher
+
+
 
 
