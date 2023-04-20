@@ -1,55 +1,15 @@
-oot@sadi-VirtualBox:/home/sadi/docker_test/example-voting-app/result# docker run postgres:9.4 -e POSTGRES_HOST_AUTH_METHOD=trust POSTGRES_PASSWORD=password
-Error: Database is uninitialized and superuser password is not specified.
-       You must specify POSTGRES_PASSWORD for the superuser. Use
-       "-e POSTGRES_PASSWORD=password" to set it in "docker run".
 
-       You may also use POSTGRES_HOST_AUTH_METHOD=trust to allow all connections
-       without a password. This is *not* recommended. See PostgreSQL
-       documentation about "trust":
-       https://www.postgresql.org/docs/current/auth-trust.html
+root@sadi-VirtualBox:/home# kubectl get all
+E0420 14:18:32.063658   16256 memcache.go:265] couldn't get current server API group list: <html><head><meta http-equiv='refresh' content='1;url=/login?from=%2Fapi%3Ftimeout%3D32s'/><script>window.location.replace('/login?from=%2Fapi%3Ftimeout%3D32s');</script></head><body style='background-color:white; color:white;'>
 
 
-root@sadi-VirtualBox:/home/sadi/docker_test/example-voting-app/worker# docker build . -t worker-app
-Sending build context to Docker daemon  10.24kB
-Step 1/13 : FROM --platform=${BUILDPLATFORM} mcr.microsoft.com/dotnet/sdk:7.0 as build
-failed to parse platform : "" is an invalid component of "": platform specifier component must match "^[A-Za-z0-9_-]+$": invalid argument
-root@sadi-VirtualBox:/home/sadi/docker_test/example-voting-app/worker#
+Authentication required
+<!--
+-->
 
+</body></html>
+E0420 14:18:32.078012   16256 memcache.go:265] couldn't get current server API group list: <html><head><meta http-equiv='refresh' content='1;url=/login?from=%2Fapi%3Ftimeout%3D32s'/><script>window.location.replace('/login?from=%2Fapi%3Ftimeout%3D32s');</script></head><body style='background-color:white; color:white;'>
 
-
-$ apt-get update && apt-get install -y apt-transport-https curl
-$ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-$ cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
-deb https://apt.kubernetes.io/ kubernetes-xenial main
-EOF
-$ apt-get update
-$ apt-get install -y kubelet kubeadm kubectl
-$ apt-mark hold kubelet kubeadm kubectl
-
-root@sadi-VirtualBox:/home# kubeadm init
-[init] Using Kubernetes version: v1.27.1
-[preflight] Running pre-flight checks
-	[WARNING Swap]: swap is enabled; production deployments should disable swap unless testing the NodeSwap feature gate of the kubelet
-error execution phase preflight: [preflight] Some fatal errors occurred:
-	[ERROR CRI]: container runtime is not running: output: E0420 12:11:22.986115    7954 remote_runtime.go:616] "Status from runtime service failed" err="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial unix /var/run/containerd/containerd.sock: connect: no such file or directory\""
-time="2023-04-20T12:11:22+02:00" level=fatal msg="getting status of runtime: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial unix /var/run/containerd/containerd.sock: connect: no such file or directory\""
-, error: exit status 1
-[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
-To see the stack trace of this error execute with --v=5 or higher
-
---cri-socket=/var/run/dockershim.sock lors de l'exécution de kubeadm init
-
-CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                                        NAMES
-18f78cc9dd5e   consul    "docker-entrypoint.s…"   53 minutes ago   Up 53 minutes   8300-8302/tcp, 8500/tcp, 8301-8302/udp, 8600/tcp, 8600/udp   runtime
-root@sadi-VirtualBox:/home# kubeadm init
-[init] Using Kubernetes version: v1.27.1
-[preflight] Running pre-flight checks
-error execution phase preflight: [preflight] Some fatal errors occurred:
-	[ERROR CRI]: container runtime is not running: output: E0420 13:45:53.626536   11527 remote_runtime.go:616] "Status from runtime service failed" err="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial unix /var/run/containerd/containerd.sock: connect: no such file or directory\""
-time="2023-04-20T13:45:53+02:00" level=fatal msg="getting status of runtime: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial unix /var/run/containerd/containerd.sock: connect: no such file or directory\""
-, error: exit status 1
-[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
-To see the stack trace of this error execute with --v=5 or higher
 
 
 
