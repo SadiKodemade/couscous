@@ -37,5 +37,7 @@ time="2023-04-20T12:11:22+02:00" level=fatal msg="getting status of runtime: rpc
 [preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
 To see the stack trace of this error execute with --v=5 or higher
 
+--cri-socket=/var/run/dockershim.sock lors de l'exécution de kubeadm init
+
 
 
