@@ -20,7 +20,7 @@ sadi@sadi-VirtualBox:~$ minikube start
 💡  Suggestion : Réinstallez VirtualBox et redémarrez. Sinon, essayez le pilote kvm2 : https://minikube.sigs.k8s.io/docs/reference/drivers/kvm2/
 🍿  Problème connexe: https://github.com/kubernetes/minikube/issues/3974
 
-
+https://r2schools.com/how-to-install-minikube-on-ubuntu-22-04-lts/
 
 
 
