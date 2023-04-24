@@ -23,6 +23,16 @@ Authentication required
 E0420 14:18:32.078012   16256 memcache.go:265] couldn't get current server API group list: <html><head><meta http-equiv='refresh' content='1;url=/login?from=%2Fapi%3Ftimeout%3D32s'/><script>window.location.replace('/login?from=%2Fapi%3Ftimeout%3D32s');</script></head><body style='background-color:white; color:white;'>
 
 
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+puis
+
+
+
+
+
+14 h 59
+sudo dpkg -i minikube_latest_amd64.deb
+
 
 
 
